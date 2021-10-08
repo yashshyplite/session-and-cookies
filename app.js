@@ -8,8 +8,8 @@ const Tracing = require("@sentry/tracing");
 var app = express();
 
 Sentry.init({
-    release: "session@" + process.env.npm_package_version,
     dsn: "https://e25d741c54c641f78f5cf6e17e8fb832@o1029468.ingest.sentry.io/5996959",
+    release: "session@" + 1.0,
     integrations: [
       new Sentry.Integrations.Http({ tracing: true }),
       new Tracing.Integrations.Express({ app }),
